@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merciado Park</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Merciado Park</div>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="ticket.html">Tickets</a></li>
+            <li><a href="Resturent.html">Resturent</a></li>
+            <li><a href="Gallery.html">Gallerey</a></li>
+        </ul>
+    </nav>
+    <section class="section">
+        <h2>Ticket Prices</h2>
+        <div class="price-selector">
+            <select id="day-type">
+                <option value="weekday">Weekday</option>
+                <option value="weekend">Weekend</option>
+            </select>
+        </div>
+        <table id="ticket-table">
+            <thead>
+                <tr>
+                    <th>Ticket Type</th>
+                    <th>Weekday Price</th>
+                    <th>Weekend Price</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Single Entry</td>
+                    <td data-price="20">$20</td>
+                    <td data-price="25">$25</td>
+                    <td>
+                        <input type="number" class="quantity" data-type="single" min="0" value="0">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Family Pack</td>
+                    <td data-price="60">$60</td>
+                    <td data-price="80">$80</td>
+                    <td>
+                        <input type="number" class="quantity" data-type="family" min="0" value="0">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="total">
+            <h3>Total: $<span id="total-price">0</span></h3>
+        </div>
+        <a  onclick="
+        alert ('Your Ticket is booked');
+        " href="ticket.html" class="cta-button">Book Tickets</a>
+    </section>
+    
+    
+    <footer id="contact" class="footer">
+        <p>&copy; 2024 Merciado Amusement Park | All rights reserved.</p>
+        <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+        </ul>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
